@@ -1,0 +1,46 @@
+/**overwrite some bootstrap properties*/
+th {
+    text-align: center;
+}
+
+.alert{
+	margin-top:5px;
+}
+.alert img{
+	margin-right: 5px;
+}
+.btn{
+	vertical-align: unset;
+}
+.form-horizontal .radio,
+ .form-horizontal .checkbox,
+  .form-horizontal .radio-inline,
+   .form-horizontal .checkbox-inline {
+   	padding-top: 4px;
+   }
+
+.navbar-info{
+	background-color: #d9edf7;
+}
+
+b, strong {
+	
+	font-weight: bold !important;
+}
+
+.panel{
+	border-radius: 0px !important;
+}
+.breadcrumb{
+	border-radius: 0px !important;
+}
+
+.panel > .list-group:first-child .list-group-item:first-child, .panel > .panel-collapse > .list-group:first-child .list-group-item:first-child
+{
+	border-top-left-radius: 0px !important;
+	border-top-right-radius: 0px !important;
+}
+
+.ui-datepicker select.ui-datepicker-month, .ui-datepicker select.ui-datepicker-year {
+	color: #746e6e;	
+}
