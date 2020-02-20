@@ -16,41 +16,41 @@
     <form action="{{ route('biblSearch') }}" method="post" role="search" >
     <input type="hidden" value="{{ csrf_token() }}" name="_token" />             
     <div class="form-groupe col-md-2">
-                         <label for=""></label>
-                        <button class="btn btn-primary form-control search-button" type="submit" name="submit" value="Search">
-                        بحث<i class="fas fa-search"></i></button>               
-                    </div>
-                    <div class="form-groupe col-md-2">
-                        <label for="">الحالة</label>                                       
-                            <select class="form-control" name="status">
-                            <option value="id" selected disabled>-----</option>
-                                <option value="1">مقبول</option>
-                                <option value="0">مرفوض</option>
-                                <option value="3">في الإنتظار</option>
-                        </select>
-                    </div>
-                    <div class="form-groupe col-md-2">
-                        <label for="" >تاريخ الوضع</label>
-                        <input type="search" id="date_ar1"
-                        value="{{ old('created_at')}}"
-                        name="created_at" class="form-control">
-                    </div>  
-                    <div class="form-groupe col-md-2">
-                        <label for="" >تاريخ الحضور</label>
-                        <input type="search" id="date_ar"
-                        value="{{ old('visite_date')}}"
-                        name="visite_date" class="form-control">
-                    </div>
-                    <div class="form-groupe col-md-2">
-                        <label for="">رقم التعريف</label>
-                        <input type="search" name="n_cin"
-                        value="{{ old('n_cin')}}" class="form-control">
-                    </div>
-                    <div class="form-groupe col-md-2">
-                        <label for="" >الاسم الكامل</label>
-                        <input type="search" name="nom_ar" 
-                        value="{{ old('nom_ar')}}" class="form-control">
-                    </div>       
+           <label for=""></label>
+            <button class="btn btn-primary form-control search-button" type="submit" name="submit" value="Search">
+            بحث<i class="fas fa-search"></i></button>               
+        </div>
+        <div class="form-groupe col-md-2">
+            <label for="">الحالة</label>                                       
+                <select class="form-control" name="status">
+                <option value="id" selected disabled>-----</option>
+                    <option value="1">مقبول</option>
+                    <option value="0">مرفوض</option>
+                    <option value="3">في الإنتظار</option>
+            </select>
+        </div>
+        <div class="form-groupe col-md-2">
+            <label for="" >تاريخ الوضع</label>
+            <input type="search" id="date_ar1"
+            value="{{ old('created_at')}}"
+            name="created_at" class="form-control">
+        </div>  
+        <div class="form-groupe col-md-2">
+            <label for="" >تاريخ الحضور</label>
+            <input type="search" id="date_ar"
+            value="{{ old('visite_date')}}"
+            name="visite_date" class="form-control">
+        </div>
+        <div class="form-groupe col-md-2">
+            <label for="">رقم التعريف</label>
+            <input type="search" name="n_cin"
+            value="{{ old('n_cin')}}" class="form-control">
+        </div>
+        <div class="form-groupe col-md-2">
+            <label for="" >الاسم الكامل</label>
+            <input type="search" name="nom_ar" 
+            value="{{ old('nom_ar')}}" class="form-control">
+        </div>       
     </form>
 </div>
 <!--end form serch-->
@@ -68,10 +68,7 @@
                 </tr>
     </thead>
             <tbody class="font_tbody">
-          
-
             @foreach($bibliotheques as $bibliotheque)
-            
                 <tr>
                     <td>{{ 
                          date('d/m/Y', strtotime($bibliotheque->created_at))
@@ -104,11 +101,7 @@
                                 </a>
                         </td>
                 </tr>
-                
-            @endforeach
-               
-                
-               
+            @endforeach  
             </tbody>
         </table>
         <div class="pagination">{{ $bibliotheques->links() }}</div>
